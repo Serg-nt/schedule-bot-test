@@ -8,6 +8,7 @@ export const options = {
                 ],
                 [
                     {text: 'Оставить комментарий', callback_data: 'addComment'},
+                    {text: 'Посмотреть результат', callback_data: 'giveResult'},
                 ],
             ],
         })
@@ -25,16 +26,14 @@ export const options = {
         reply_markup: JSON.stringify({
             inline_keyboard: [
                 [
-                    {text: 'Понедельник', callback_data: 'SelectPersonalMon'},
-                    {text: 'Вторник', callback_data: 'SelectPersonalTue'},
-                    {text: 'Среда', callback_data: 'SelectPersonalWed'},
-                ],
-                [
-                    {text: 'Четверг', callback_data: 'SelectPersonalThu'},
-                    {text: 'Пятница', callback_data: 'SelectPersonalFri'},
-                    {text: 'Суббота', callback_data: 'SelectPersonalSat'},
-                ],
-                [{text: 'Воскресенье', callback_data: 'SelectPersonalSun'},],
+                    {text: 'ПН', callback_data: 'SelectPersonalMon'},
+                    {text: 'ВТ', callback_data: 'SelectPersonalTue'},
+                    {text: 'СР', callback_data: 'SelectPersonalWed'},
+                    {text: 'ЧТ', callback_data: 'SelectPersonalThu'},
+                    {text: 'ПТ', callback_data: 'SelectPersonalFri'},
+                    {text: 'СБ', callback_data: 'SelectPersonalSat'},
+                    {text: 'ВС', callback_data: 'SelectPersonalSun'},
+                ]
             ]
         })
     },
@@ -43,17 +42,16 @@ export const options = {
         reply_markup: JSON.stringify({
             inline_keyboard: [
                 [
-                    {text: 'Понедельник', callback_data: 'SelectDefinedMon'},
-                    {text: 'Вторник', callback_data: 'SelectDefinedTue'},
-                    {text: 'Среда', callback_data: 'SelectDefinedWed'},
-                ],
-                [
-                    {text: 'Четверг', callback_data: 'SelectDefinedThu'},
-                    {text: 'Пятница', callback_data: 'SelectDefinedFri'},
-                    {text: 'Суббота', callback_data: 'SelectDefinedSat'},
-                ],
-                [{text: 'Воскресенье', callback_data: 'SelectDefinedSun'},],
+                    {text: 'ПН', callback_data: 'SelectDefinedMon'},
+                    {text: 'ВТ', callback_data: 'SelectDefinedMon'},
+                    {text: 'СР', callback_data: 'SelectDefinedMon'},
+                    {text: 'ЧТ', callback_data: 'SelectDefinedMon'},
+                    {text: 'ПТ', callback_data: 'SelectDefinedMon'},
+                    {text: 'СБ', callback_data: 'SelectDefinedMon'},
+                    {text: 'ВС', callback_data: 'SelectDefinedMon'},
+                ]
             ]
         })
     },
 }
+
