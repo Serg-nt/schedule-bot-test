@@ -4,7 +4,6 @@ import config from 'config';
 import cors from 'cors';
 import {UserController} from "./controllers/index.js";
 import {startBot} from "./bot/index.js";
-import TelegramApi from "node-telegram-bot-api";
 
 
 const app = express();
@@ -24,6 +23,8 @@ const start = async () => {
         app.delete('/users/:id', UserController.removeUser);
         app.put('/users/:id', UserController.updateUser)
 
+        console.log('???: ', process.cwd());
+        app.use('/', express.static(process.cwd() + '/public'));
 
         app.listen(PORT, () => {
             console.log('Server started on port ', PORT);

@@ -2,7 +2,7 @@ import UserModel from '../models/User.js'
 
 export const getAllUsers = async (req, res) => {
     try {
-        const users = await UserModel.find({});
+        const users = await UserModel.find({}).sort({ fullName: 1 });
         res.json(users);
     } catch (err) {
         console.log(err);
